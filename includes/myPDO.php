@@ -8,9 +8,9 @@ class myPDO {
 
 	public function connect() {
 		$this->hostname = "localhost";
-		$this->dbname = "lewliu";
-		$this->username = "lewis8815";
-		$this->password = "LewisIXY1314";
+		$this->dbname = "dbname";
+		$this->username = "username";
+		$this->password = "password";
 		try {
 			$dsn = "mysql:host=".$this->hostname.";dbname=".$this->dbname;
 			$pdo = new PDO($dsn,$this->username,$this->password);
