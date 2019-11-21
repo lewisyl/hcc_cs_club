@@ -1,0 +1,944 @@
+* {
+    box-sizing: border-box;
+   }
+   *:before,
+   *:after {
+    box-sizing: border-box;
+   }
+
+html{
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body{
+	margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    min-height: 100%;
+
+}
+
+h1{
+    font-size: 2em;  
+}
+
+h2{
+    font-size: 1.5em;
+}
+
+h3{
+    font-size: 1em;
+}
+
+h4{
+    font-size: 1em;
+}
+
+
+
+/*--------------------header-------------------*/
+header{
+    margin:auto;
+    text-align: center;
+    padding:1.5em 0 .5em 0;
+    margin:0;
+    background-color: #214664;
+}
+
+header img{
+    width: auto;
+}
+
+.pageTitle {
+    margin: auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    color: #d6e4eb;
+    background-image: url("images/pageTitleBackground.png");
+}
+
+/*-------------------navbar---------------------*/
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #214664;
+}
+
+ul.topnav li {
+	float: left;
+	width:14.285%;
+	margin:auto;
+}
+
+ul.topnav li a {
+    text-align: center;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    text-decoration: none;
+    transition: 0.6s ease;
+}
+
+ul.topnav li a:hover:not(.active) {
+    background-color: #3f9744;
+}
+
+@media screen and (max-width: 37.5em){
+    ul.topnav li {float: none;}
+}
+
+
+
+/*----------------------footer----------------------*/
+footer {
+    text-align: center;
+    background-color: #214664;
+    color:white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    clear: both;
+}
+
+
+
+
+
+/*----------------------Home----------------------*/
+
+/* announcement */
+.announcement {
+    font-size: 1.5em;
+    background-color:#f37a7a;
+    margin: 1% 0;
+}
+
+/* page layout */
+.indexMain {
+    width: 100%;
+    padding: 1%;
+}
+
+.indexMain section{
+    display: block;
+    float: left;
+    width: 74%;
+}
+
+.indexMain aside{
+    display: block;
+    float: left;
+    width: 24%;
+}
+
+@media screen and (max-width: 37.5em){
+    .indexMain section, .indexMain aside {
+        float: none; width: 100%; margin:auto; 
+    }
+    .indexArticle {
+        width: 100%;
+    }
+}
+
+/* Article */
+.indexArticle {
+    background-color: #81aed318;
+    padding: 2em;
+    margin: 1em 1em 0 0;
+    width: 95%;
+}
+
+.indexArticle article {
+    text-indent: 2em;
+}
+
+.indexAside {
+    text-align: center;
+}
+
+.slideshow-container {
+    padding: 0.5em 0;
+    margin: 1em auto;
+    border: .01em solid rgba(196, 196, 196, 0.87)
+  }
+
+
+/* Slides */
+.pastSlides, .upcomingSlides {
+    display: none;
+    position: relative;
+    padding: 2em;
+    text-align: center;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.pastSlide-content {
+    visibility: hidden;
+    width: 80%;
+    background-color: #81aed3ea;
+    color: #fff;
+    text-align: center;
+    border-radius: .5em;
+    padding: .5em 0;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+}
+
+.pastSlide-title:hover + .pastSlide-content {
+    visibility: visible;
+}
+
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 1em;
+}
+
+/* The dots/bullets/indicators */
+.pastDot, .upcomingDot {
+  cursor: pointer;
+  height: 1em;
+  width: 0.9em;
+  margin: 0 .2em;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+
+/*----------------------Homepage Calendar----------------------*/
+.eventCalendar {
+    width:95%;
+    text-align: center;
+    margin-bottom: 3em;
+}
+  
+
+.label {
+    margin: auto;
+    padding: 1em 0;
+    background-color: #ddd;
+}
+  
+.label li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+}
+
+.dates {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.dates .free, .dates .busy {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: .5em;
+    font-size:.8em;
+    color: #777;
+}
+
+.calendarHeader {
+    text-align: center;
+    margin: 1em auto;
+    font-size:1em;
+}
+
+.calendarHeader button {
+    font-weight: bold;
+    border: none;
+    background-color: #214664;
+    border-radius: 50%;
+    padding: .4em;
+
+    font-size:1em;
+}
+
+.calendarHeader button:hover:not(.active) {
+    background-color: #3f9744;
+
+}
+
+.calendarHeader button a:link, .calendarHeader button a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.calendarHeader .title {
+    margin: 0 1em;
+}
+
+.eventToday {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    border-bottom: 0.11em dotted  #3f9744;
+  }
+
+.calendarEventTitle {
+    visibility: hidden;
+    width: 7.5em;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: .5em;
+    padding: .5em 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.eventToday:hover + .calendarEventTitle {
+    visibility: visible;
+}
+
+@media only screen and (max-width: 37.5em){
+    .eventCalendar {
+        width:100%;
+    }
+}
+
+
+
+
+
+
+/*----------------------Member Sign Up----------------------*/
+.signupForm {
+    border-radius: 2em;
+    padding: 2em;
+    margin:auto;
+    margin-bottom: 2%;
+    width:60%;
+}
+
+.signupForm h2 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.signupForm div{
+    border: .05em solid rgb(214, 214, 214);
+    padding: 2em;
+}
+
+.signupForm input[type=text], input[type=email] {
+    width: 100%;
+    padding: .5em;
+    border: .1em solid #cccccc;
+    border-radius: .5em;
+    box-sizing: border-box;
+    margin-top: .5em;
+    margin-bottom: 1.5em;
+    background-color: white;
+    font-size: .9em
+}
+
+.signupForm input[type=checkbox] {
+    margin-top: .5em;
+    margin-bottom: 1.5em;
+}
+
+.signupForm ul {
+    list-style-type: none;
+    display: inline-flex;
+    flex-wrap:wrap;
+    width:100%;
+}
+
+.signupForm input[type=submit] {
+    background-color: #214664;
+    color: white;
+    cursor: pointer;
+    padding: .6em 1.5em;
+    margin-top: 2%;
+    border: none;
+    border-radius: .5em;
+    font-size: .9em;
+    transition: 0.2s ease;
+    width: 100%;
+}
+
+.signupForm input[type=submit]:hover:not(.active) {
+    background-color: #3f9744;
+}
+
+@media only screen and (max-width: 37.5em){
+    section.signupForm {
+        width:85%;
+    }
+}
+
+
+/*----------------------Member Opportunities && FAQs----------------------*/
+.toggleData {
+    margin: 1.2rem 0;
+}
+
+.toggleData input[type=checkbox]{
+    display: none;
+}
+
+.toggleLabel {
+    display: block;
+
+    font-weight: bold;
+
+    padding: 1rem;
+
+
+    cursor: pointer;
+
+    transition: all 0.25s ease-out;
+
+}
+
+.toggleLabel:hover {
+    color: #214664
+}
+
+.toggleLabel::before {
+    content: ' ';
+    display: inline-block;
+
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+
+    transition: transform .2s ease-out;
+}
+
+.toggle:checked + .toggleLabel::before {
+    transform: rotate(90deg) translateX(-3px);
+}
+
+.dropDownContainer {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .toggleLabel + .dropDownContainer {
+    max-height: 70em;
+    overflow: auto;
+
+}
+
+.toggle:checked + .toggleLabel {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.dropDownContainer .dropDownContainer-inner {
+    background: #81aed33d;
+    border-bottom: 1px solid #3f9744;
+    border-radius: 7px;
+    padding: .5rem 2rem .5rem 3rem;
+    width:99%;
+    margin:auto;
+}
+
+.dropDownContainer .dropDownContainer-inner pre{
+    white-space: pre-wrap;
+}
+
+
+
+
+@media only screen and (max-width: 37.5em){
+    .toggleData {
+        text-align: center;
+    }
+}
+
+/*----------------------About----------------------*/
+.about {
+    padding:0 1%;
+    margin:1% 1% 5em 1%;
+}
+
+.csDepLinks {
+    text-align: center;
+    margin: auto;
+}
+
+.csDepLinks button {
+    border: none;
+    background-color: #214664;
+    padding: .4em .7em;
+    margin: 0 1em;
+    border-radius: .5em;
+}
+
+.csDepLinks button a:link, .csDepLinks button a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.club_Do_Offer {
+    text-align: center;
+} 
+
+.club_Do_Offer section {
+    display: block;
+    float: left;
+    width: 50%;
+    margin-bottom: 5em;
+}
+
+.club_Do_Offer section ul{
+    text-align: left;
+}
+
+@media only screen and (max-width: 37.5em){
+    .about {
+        text-align: center;
+    }
+
+    .club_Do_Offer section {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+}
+
+
+/*----------------------Contact Us----------------------*/
+/*Club Leaders and Faculty*/
+.leaders, .faculty {
+    width: 98%;
+    margin-left: 2%;
+}
+.clubLeaders, .clubFaculty {
+    width:100%;
+    list-style-type: none;
+    text-align: center;
+    display: inline-flex;
+    flex-wrap:wrap;
+}
+
+ul.clubLeaders li.leaderInfo, ul.clubFaculty li.facultyInfo {
+    width: 19.5%;
+    margin: 1%;
+}
+
+.leaderInfo p {
+    overflow-wrap: break-word;
+    width: 100%;
+}
+
+ul.clubLeaders li.leaderInfo img , .clubFaculty .facultyInfo img{
+    width:50%;
+    border-radius: 10%;
+}
+
+/*Contact Form*/
+.contactForm {
+    border-radius: 2em;
+    padding: 2em;
+    margin:auto;
+    margin-bottom: 2%;
+    width:60%;
+}
+
+.contactForm h3 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1.5em;
+}
+
+.contactForm input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: .5em;
+    border: .1em solid #cccccc;
+    border-radius: .5em;
+    box-sizing: border-box;
+    margin-top: .5em;
+    margin-bottom: 1.5em;
+    font-size: .9em
+}
+
+.contactForm input[type=submit] {
+    background-color: #214664;
+    color: white;
+    cursor: pointer;
+    padding: .6em 1.5em;
+    border: none;
+    border-radius: .5em;
+    font-size: .9em;
+    transition: 0.2s ease;
+    width: 100%;
+}
+
+.contactForm input[type=submit]:hover:not(.active) {
+    background-color: #3f9744;
+}
+
+.messageSent {
+    width: 100%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 37.5em){
+    .contactForm {
+        width:85%;
+    }
+
+    .leaders h2, .faculty h2 {
+        text-align: center;
+    }
+}
+
+
+
+/*----------------------Admin Login----------------------*/
+.adminLoginForm {
+    border-radius: 2em;
+    padding: 2em;
+    margin:auto;
+    margin-top: 0;
+    margin-bottom: 2%;
+    width:50%;
+}
+
+.adminLoginForm div{
+    border: .05em solid rgb(214, 214, 214);
+    padding: 2em;
+}
+
+.adminLoginForm h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.adminLoginForm input[type=text], input[type=password] {
+    width: 100%;
+    padding: .5em;
+    border: .1em solid #cccccc;
+    border-radius: .5em;
+    box-sizing: border-box;
+    margin-top: .5em;
+    margin-bottom: 1.5em;
+    background-color: white;
+    font-size: .9em
+}
+
+.adminLoginForm input[type=checkbox] {
+    margin-top: .5em;
+    margin-bottom: 1.5em;
+}
+
+.adminLoginForm input[type=submit] {
+    background-color: #214664;
+    color: white;
+    cursor: pointer;
+    padding: .6em 1.5em;
+    margin-top: 2%;
+    border: none;
+    border-radius: .5em;
+    font-size: .9em;
+    transition: 0.2s ease;
+    width: 100%;
+}
+
+.adminLoginForm input[type=submit]:hover:not(.active) {
+    background-color: #3f9744;
+}
+
+@media only screen and (max-width: 37.5em){
+    .adminLoginForm {
+        width:85%;
+    }
+
+    .adminImage img {
+        width: 50%;
+    }
+}
+
+
+/*----------------------Admin Home----------------------*/
+.adminHome {
+    width:100%;
+    padding: 1%;
+}
+
+.adminHomeLeft {
+    display: block;
+    float: left;
+    width: 70%;
+}
+
+.adminHomeLeft div {
+    overflow-y:auto;
+}
+
+.adminHomeRight {
+    text-align: left;
+    display: block;
+    float: left;
+    width: 24%;
+    margin-left: 4%;
+}
+
+
+@media only screen and (max-width: 37.5em){
+    .adminHomeLeft, .adminHomeRight {
+        float: none; width: 100%; margin:auto; 
+    }
+}
+
+.dbContent {
+    overflow-y:auto;
+    max-height: 27em;
+}
+
+table.dbList {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 0.1em solid #ddd;
+    table-layout: fixed;
+    overflow-y:auto;
+}
+
+.dbList caption {
+    text-align: left;
+    font-size: 1.5em;
+    margin-top: 3%;
+}
+
+.dbList td, .dbList th {
+    text-align: left;
+    padding: 8px;
+    word-wrap: break-word;
+}
+
+.dbList td img {
+    width: 100%;
+}
+
+.dbList .longDetail {
+    max-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.longDetail:hover, .longDetail:active, .longDetail:focus {
+    max-height: 350px;
+    text-overflow: none;
+    white-space: pre-wrap;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+-webkit-user-select: none; 
+-webkit-touch-callout: none /*only to disable context menu on long press*/
+}
+
+.dbList tr:nth-child(even){
+    background-color: #f2f2f2
+}
+
+.sendGroupEmail {
+    border: .05em solid rgb(214, 214, 214);
+    padding: .5em;
+    margin-bottom: 1em;
+}
+
+.sendGroupEmail input[type=text], input[type=email], textarea, .makeAnnouncement textarea {
+    width: 100%;
+    padding: .5em;
+    border: .1em solid #cccccc;
+    border-radius: .5em;
+    box-sizing: border-box;
+    margin-top: .5em;
+    margin-bottom: 1.5em;
+    font-size: .9em
+}
+
+.sendGroupEmail input[type=submit] {
+    background-color: #214664;
+    color: white;
+    cursor: pointer;
+    padding: .6em 1.5em;
+    border: none;
+    border-radius: .5em;
+    font-size: .9em;
+    transition: 0.2s ease;
+    width: 100%;
+}
+
+.sendGroupEmail input[type=submit]:hover:not(.active) {
+    background-color: #3f9744;
+}
+
+
+.makeAnnouncement {
+    border: .05em solid rgb(214, 214, 214);
+    padding: .5em;
+    margin-bottom: 1em;
+}
+
+.makeAnnouncement input[name='submitAnnouncement'] {
+    background-color: #214664;
+    color: white;
+    cursor: pointer;
+    padding: .6em 1.5em;
+    border: none;
+    border-radius: .5em;
+    font-size: .9em;
+    transition: 0.2s ease;
+    width: 47%;
+    display: inline-block;
+}
+.makeAnnouncement input[name='submitAnnouncement']:hover:not(.active) {
+    background-color: #3f9744;
+}
+
+.makeAnnouncement input[name='cleanAnnouncement'] {
+    background-color: #b8b6b6;
+    color: white;
+    cursor: pointer;
+    padding: .6em 1.5em;
+    border: none;
+    border-radius: .5em;
+    font-size: .9em;
+    transition: 0.2s ease;
+    width: 47%;
+    display: inline-block;
+}
+.makeAnnouncement input[name='cleanAnnouncement']:hover:not(.active) {
+    background-color: #464646;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------Admin DB Management Forms----------------------*/
+div.managingButtons {
+    margin:1% 0;
+    width:100%;
+}
+
+div.managingButtons button {
+	background-color: #214664;
+    color: white;
+    padding: 1em 2em;
+    border: none;
+    width: 33%;
+}
+
+.submitbtn {
+    width: auto;
+    padding: 10px 18px;
+    color:white;
+    background-color: #3f9744;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    color:white;
+    background-color: #464646;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.managingForms {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+    color: black;
+}
+
+.managingContent {
+    background-color: #fefefe;
+    margin: 10% auto 10% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: .1em solid #888;
+    border-radius: 0.4em;
+    width: 80%; /* Could be more or less, depending on screen size */
+    padding: 1em;
+}
+
+.managingContent input, .managingContent textarea {
+    width: 100%;
+    padding: .5em;
+    border: .1em solid #cccccc;
+    border-radius: .5em;
+    box-sizing: border-box;
+    margin-top: .5em;
+    margin-bottom: 1.5em;
+    font-size: .9em
+}
+
+.managingContent input[type=checkbox] {
+    margin-top: .5em;
+    margin-bottom: 1.5em;
+}
+
+.managingContent ul {
+    list-style-type: none;
+    display: inline-flex;
+    flex-wrap:wrap;
+    width:100%;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
